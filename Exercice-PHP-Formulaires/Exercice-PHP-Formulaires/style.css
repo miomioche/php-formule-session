@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background-color: rgb(22, 22, 22);
+}
+
+main {
+    max-width: 80vw;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+:is(h1, h2) {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+main form > div {
+    margin-bottom: 15px;
+}
+
+main form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+main form > div:has(input[type="checkbox"]) label {
+    display: inline;
+}
+
+main form :is(
+    input[type="text"], 
+    input[type="mail"], 
+    input[type="number"], 
+    input[type="tel"], 
+    input[type="password"], 
+    input[type="file"], 
+    textarea) {
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+}
+
+main form input::file-selector-button {
+    padding: 5px 25px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgb(66, 66, 66);
+    color: #fff;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+main form input[type="submit"] {
+    padding: 15px 25px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgb(11, 135, 252);
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Account page ----------------------- */
+
+p {
+    margin: 5px 0;
+}
+
+section > div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+section figure {
+    height: 200px;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+section figure img {
+    height: 100%; width: 100%;
+    object-fit: cover;
+}
